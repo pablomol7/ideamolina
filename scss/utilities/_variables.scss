@@ -1,0 +1,9 @@
+// operaciones, vamos a poder sumar restar dividir multiplicar y combinar
+
+$med-principal: 100px;
+
+h2{
+    font-size: ($med-principal - 75) * 2;
+}
+
+$color-fondo: #191919;

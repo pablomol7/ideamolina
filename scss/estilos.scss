@@ -4,6 +4,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
   }
+
+  @import "utilities/variables";
+
 // nesting
 
     .menu{
@@ -12,6 +15,31 @@
         background-image: url('../img/fondoweb.jpg');
         background-size: cover;
         background-position: center;
+      }
+      .logo{
+        display: flex;
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        align-items: center;
+        margin-right: 40px;
+      }
+      .imgLogo{
+        position: absolute;
+        left:0px;
+        height: 50px;
+        animation-name: girar;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+      }
+      @keyframes girar{
+        from{
+          transform: rotate(0);
+        }
+        to{
+          transform: rotate(360deg);
+        }
       }
       nav{
         display: flex;
@@ -26,6 +54,7 @@
                 display: inline-block;
                 padding: 10px 25px;
                 a{
+                  
                     color: white;
                     text-decoration: none;
                     font-weight: bold;
@@ -39,12 +68,7 @@
         }
 
       }
-      .logo{
-        color: white;
-        font-size: 35px;
-        letter-spacing: 1px;
-        cursor: pointer;
-      }
+      
       .btn{
         position: relative;
         left: 70%;
@@ -75,7 +99,6 @@
   h2{
     color: white;
     margin: 20px 0px 20px;
-    font-size: 50px;
   }
   h3{
     color: white;
@@ -119,18 +142,10 @@
     background-position: center;
   }
 
-  @media all and (min-width: 768px){
-    .aboutme{
-      float:left;
-      margin-right: 10%;
-      width: 20%
-    }
-  }
- 
   .aboutme{
     width: 100%;
     padding: 100px 0px;
-    background-color: #191919;
+    background-color: $color-fondo;
     img{
       height: auto;
       width: 430px;
@@ -175,6 +190,7 @@
   }
 
 .btn-box {
+    align-items: center;
     width: 100%;
     max-width: 30rem;
     text-align: center;
@@ -182,7 +198,7 @@
     margin-top: 5rem;
     overflow: visible;
     position: relative;
-    display: block;
+    left: 16%;
     font-size: 1.375rem;
     line-height: 2.4;
 }
@@ -200,8 +216,9 @@
 	text-align: center;
     }
 }
+
 .card{
-	height: 365px;
+	height: auto;
 	width: 335px;
 	padding: 20px 35px;
 	background: #191919;
@@ -329,7 +346,7 @@
 .contact{
 	width: 100%;
 	height: 290px;
-	background: #191919;
+	background: $color-fondo;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -366,7 +383,7 @@ footer{
 	position: relative;
 	width: 100%;
 	height: 400px;
-	background: #191919;
+	background:$color-fondo;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -414,5 +431,4 @@ footer {
 	bottom: 35px;
 	font-size: 14px; 
 }
-
 
